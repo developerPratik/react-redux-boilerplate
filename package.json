@@ -1,0 +1,54 @@
+{
+  "name": "react-redux-hot-reload-boilerplate",
+  "version": "1.0.0",
+  "description": "A minimalist boilerplate for react redux with hot reload using webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --open",
+    "build": "npm run clean-dist && webpack --progress --bail --env dist -p",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "open:dist": "node distServer.js"
+  },
+  "keywords": [
+    "webpack",
+    "hot-reload",
+    "react",
+    "redux"
+  ],
+  "author": "Pratik Manandhar",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^8.5.2",
+    "express": "^4.16.3",
+    "path": "^0.12.7",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "compression-webpack-plugin": "^1.1.11",
+    "copy-webpack-plugin": "^4.5.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chalk": "^2.4.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "react-hot-loader": "^4.1.0",
+    "style-loader": "^0.21.0",
+    "sass-loader": "^7.0.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-middleware": "^3.1.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.1"
+  }
+}

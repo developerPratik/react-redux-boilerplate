@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+
+
+
+#app {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 50px;
+  }
+  
+
+
+.loader {
+    position: relative;
+    margin: auto;
+    width: 60px;
+    height: 100%;
+}
+
+.loader:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.circular {
+    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+    height: auto;
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.path {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+}
+
+
+body{
+    margin: 0px !important;
+}
+@-webkit-keyframes slideLeft {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: -25%;
+    }
+  }
+  @-moz-keyframes slideLeft {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: -25%;
+    }
+  }
+  @keyframes slideLeft {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: -25%;
+    }
+  }
+  @-webkit-keyframes slideRight {
+    0% {
+      right: -200%;
+    }
+    100% {
+      right: -25%;
+    }
+  }
+  @-moz-keyframes slideRight {
+    0% {
+      right: -200%;
+    }
+    100% {
+      right: -25%;
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      right: -200%;
+    }
+    100% {
+      right: -25%;
+    }
+  }
+  @-webkit-keyframes popIn {
+    0% {
+      -webkit-transform: translateY(400px);
+      opacity: 0;
+      z-index: 1;
+    }
+    80% {
+      -webkit-transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @-moz-keyframes popIn {
+    0% {
+      -moz-transform: translateY(400px);
+      opacity: 0;
+      z-index: 1;
+    }
+    80% {
+      -moz-transform: translateY(0);
+    }
+    100% {
+      -moz-transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes popIn {
+    0% {
+      -webkit-transform: translateY(400px);
+      -moz-transform: translateY(400px);
+      -ms-transform: translateY(400px);
+      -o-transform: translateY(400px);
+      transform: translateY(400px);
+      opacity: 0;
+      z-index: 1;
+    }
+    80% {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    width: 100%;
+    height: 100vh;
+    background: #776699;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .box h1 {
+    -webkit-animation: popIn;
+    -moz-animation: popIn;
+    animation: popIn;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    -ms-transform: translateY(200px);
+    -o-transform: translateY(200px);
+    transform: translateY(200px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+    color: white;
+    cursor: none;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    opacity: 0;
+    position: relative;
+    z-index: 99;
+  }
+
+
+  @media screen and (max-width: 1300px) {
+    .box h1 {
+      margin-top: -50px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .box h1 {
+      font-size: 2rem;
+    }
+  }
+  .box:before {
+    -webkit-transform: skew(60deg);
+    -moz-transform: skew(60deg);
+    -ms-transform: skew(60deg);
+    -o-transform: skew(60deg);
+    transform: skew(60deg);
+    -webkit-transform-origin: left;
+    -moz-transform-origin: left;
+    -ms-transform-origin: left;
+    -o-transform-origin: left;
+    transform-origin: left;
+    -webkit-animation: slideLeft;
+    -moz-animation: slideLeft;
+    animation: slideLeft;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 60%;
+    height: 100%;
+    background: #8575a3;
+    z-index: 1;
+  }
+  .box:after {
+    -webkit-transform: skew(-60deg);
+    -moz-transform: skew(-60deg);
+    -ms-transform: skew(-60deg);
+    -o-transform: skew(-60deg);
+    transform: skew(-60deg);
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
+    transform-origin: right;
+    -webkit-animation: slideRight;
+    -moz-animation: slideRight;
+    animation: slideRight;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    animation-timing-function: ease;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -200%;
+    width: 60%;
+    height: 100%;
+    background: #6b5c8a;
+    z-index: 10;
+  }
+  
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+@keyframes color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}
+
+@-webkit-keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+    }
+}
+
+@-webkit-keyframes color {
+    100%,
+    0% {
+        stroke: #d62d20;
+    }
+    40% {
+        stroke: #0057e7;
+    }
+    66% {
+        stroke: #008744;
+    }
+    80%,
+    90% {
+        stroke: #ffa700;
+    }
+}
+
+
